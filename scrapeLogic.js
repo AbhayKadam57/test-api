@@ -13,7 +13,7 @@ const scrapeLogic = async (res) => {
       process.env.NODE_ENV === "production"
         ? process.env.PUPPETEER_EXECUTABLE_PATH
         : puppeteer.executablePath(),
-    headless: "new",
+    headless: true,
   });
   try {
     const page = await browser.newPage();
